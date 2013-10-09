@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<school>
-    <course category="year1">
-        <title>Science 101</title>
-        <courseNum>45</courseNum>
-        <prereq classNum"" ></prereq>
-        <teacher>Joe</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>English 101</title>
-        <courseNum>9</courseNum>
-        <prereq classNum"0" ></prereq>
-        <teacher>Eric</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>ComSci 101</title>
-        <courseNum>12</courseNum>
-        <prereq classNum"0" ></prereq>
-        <teacher>Frank</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>Math 101</title>
-        <courseNum>378</courseNum>
-        <prereq classNum"0" ></prereq>
-        <teacher>Dan</teacher>
-        <credit>3</credit>
-    </course>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<school>
+    <course category="year1">
+        <title>Science 101</title>
+        <courseNum>45</courseNum>
+        <prereq classNum="0" ></prereq>
+        <teacher>Joe</teacher>
+        <credit>3</credit>
+    </course>
+    <course category="year1">
+        <title>English 101</title>
+        <courseNum>9</courseNum>
+        <prereq classNum="0" ></prereq>
+        <teacher>Eric</teacher>
+        <credit>3</credit>
+    </course>
+    <course category="year1">
+        <title>ComSci 101</title>
+        <courseNum>12</courseNum>
+        <prereq classNum="0" ></prereq>
+        <teacher>Frank</teacher>
+        <credit>3</credit>
+    </course>
+    <course category="year1">
+        <title>Math 101</title>
+        <courseNum>378</courseNum>
+        <prereq classNum="0" ></prereq>
+        <teacher>Dan</teacher>
+        <credit>3</credit>
+    </course>
 </school>
