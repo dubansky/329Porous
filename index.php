@@ -268,58 +268,30 @@
     </div>
 
 	<div class="info-col">
-
 		<h2>Classes</h2>
-
 		<dl>
-
 		  <dt>Year 1</dt>
-
               <dd>
-
               	<div id="year1">
-              	<div id="content">
-              	
               	</div>
-
-              	</div>
-
-
-
               </dd>
-
 		  <dt>Year 2</dt>
-
               <dd>
-
-                    info for year 2
-
+                <div id="year2">
+              	</div>
               </dd>
-
 		  <dt>Year 3</dt>
-
 		  	<dd>
-
-                info for year 3
-
+                <div id="year3">
+              	</div>
 		     </dd>
-
         <dt>Year 4</dt>
-
 		  	<dd>
-
-                info for year 4
-
+              	<div id="year4">
+              	</div>
 		     </dd>
-
 		</dl>
-
-	
-
 	</div>
-
-					
-
 </div>
 
 
@@ -335,22 +307,104 @@ xhr.open('GET', 'classes.xml', false);
 xhr.onreadystatechange = function () {
     if (xhr.readyState===4 && xhr.status===200) {           
         var items = xhr.responseXML.getElementsByTagName('course');
+
         var output = '<ul><li>';
         for (var i=0; i<items.length; i++){
-			var title = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-			var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
-			var teacher  = items[i].getElementsByTagName("teacher")[0].childNodes[0].nodeValue;
-
-        	output += '<div class="course">'+ title +"</br>"+ teacher +"</br>" +courseNum+""+ '</div>';
+        	if(items[i].getAttribute('category') == 'year1'){
+				var title = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+				var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
+				var credit  = items[i].getElementsByTagName("credit")[0].childNodes[0].nodeValue;
+				output += '<div class="course">'+ title +"</br>Credit:" +credit+'<input type="checkbox" id="'+ courseNum +'">'+ '</div>';
+        	}
         } 
-        	
         output += '</li></ul>';
+        var div = document.getElementById('year1');
+        div.innerHTML = output;
+        
+        
+        
+        
+        var output = '<ul><li>';
+        for (var i=0; i<items.length; i++){
+        	if(items[i].getAttribute('category') == 'year2'){
+				var title = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+				var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
+				var credit  = items[i].getElementsByTagName("credit")[0].childNodes[0].nodeValue;
+				output += '<div class="course">'+ title +"</br>"+ courseNum +"</br>" +credit+""+ '</div>';
+        	}
+        } 
+        output += '</li></ul>';
+        var div = document.getElementById('year2');
+        div.innerHTML = output;
+        
+        var output = '<ul><li>';
+        for (var i=0; i<items.length; i++){
+        	if(items[i].getAttribute('category') == 'year3'){
+				var title = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+				var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
+				var credit  = items[i].getElementsByTagName("credit")[0].childNodes[0].nodeValue;
+				output += '<div class="course">'+ title +"</br>"+ courseNum +"</br>" +credit+""+ '</div>';
+        	}
+        } 
+        output += '</li></ul>';
+        var div = document.getElementById('year3');
+        div.innerHTML = output;
+
+
+
+        var output = '<ul><li>';
+        for (var i=0; i<items.length; i++){
+        	if(items[i].getAttribute('category') == 'year4'){
+				var title = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+				var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
+				var credit  = items[i].getElementsByTagName("credit")[0].childNodes[0].nodeValue;
+				output += '<div class="course">'+ title +"</br>"+ courseNum +"</br>" +credit+""+ '</div>';
+        	}
+        } 
+        output += '</li></ul>';
+        var div = document.getElementById('year4');
+        div.innerHTML = output;
+    }
+}
+xhr.send();
+
+
+
+
+
+
+
+
+
+
+
+var xhr;
+if (window.XMLHttpRequest) xhr = new XMLHttpRequest();      // all browsers except IE
+else xhr = new ActiveXObject("Microsoft.XMLHTTP");      // for IE
  
+xhr.open('GET', 'users.xml', false);
+xhr.onreadystatechange = function () {
+    if (xhr.readyState===4 && xhr.status===200) {           
+        var items = xhr.responseXML.getElementsByTagName('completedclass');
+
+        for (var i=0; i<items.length; i++){
+				var course = items[i].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+				var courseNum = items[i].getElementsByTagName("courseNum")[0].childNodes[0].nodeValue;
+				var credit  = items[i].getElementsByTagName("credit")[0].childNodes[0].nodeValue;
+				output += '<div class="course">'+ title +"</br>Credit:" +credit+'<input type="checkbox" id="'+ courseNum +'">'+ '</div>';
+        	
+        } 
         var div = document.getElementById('year1');
         div.innerHTML = output;
     }
 }
 xhr.send();
+
+
+
+
+
+
 
 </script>
 

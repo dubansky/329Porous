@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<UserList>
+
+    <user>
+        <name>Joe</name>
+        <password>MATH</password>
+        <completedclass>MATH 165</completedclass>
+        <completedclass>SE 101</completedclass>
+        <completedclass>ENGL 150</completedclass>
+    </user>
+    
+    
+</UserList>

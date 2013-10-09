@@ -1,31 +1,108 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<school>
-    <course category="year1">
-        <title>Science 101</title>
-        <courseNum>45</courseNum>
-        <prereq classNum="0" ></prereq>
-        <teacher>Joe</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>English 101</title>
-        <courseNum>9</courseNum>
-        <prereq classNum="0" ></prereq>
-        <teacher>Eric</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>ComSci 101</title>
-        <courseNum>12</courseNum>
-        <prereq classNum="0" ></prereq>
-        <teacher>Frank</teacher>
-        <credit>3</credit>
-    </course>
-    <course category="year1">
-        <title>Math 101</title>
-        <courseNum>378</courseNum>
-        <prereq classNum="0" ></prereq>
-        <teacher>Dan</teacher>
-        <credit>3</credit>
-    </course>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<school>
+
+    <course category="year1">
+        <title>MATH 165</title>
+        <courseNum>MATH 165</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>4</credit>
+    </course>
+    <course category="year1">
+        <title>CHEM 167</title>
+        <courseNum>CHEM 167</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>4</credit>
+    </course>
+    <course category="year1">
+        <title>SE 101</title>
+        <courseNum>SE 101</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>R</credit>
+    </course>
+    <course category="year1">
+        <title>ENGL 150</title>
+        <courseNum>ENGL 150</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>3</credit>
+    </course>
+    <course category="year1">
+        <title>MATH 166</title>
+        <courseNum>MATH 166</courseNum>
+        <prereq classNum="1" >MATH 165</prereq>
+        <credit>4</credit>
+    </course>
+    <course category="year1">
+        <title>PHYS 221</title>
+        <courseNum>PHYS 221</courseNum>
+        <prereq classNum="1" >MATH 165</prereq>
+        <credit>5</credit>
+    </course>
+    <course category="year1">
+        <title>COM S 227</title>
+        <courseNum>COM S 227</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>4</credit>
+    </course>
+    <course category="year1">
+        <title>SE 166</title>
+        <courseNum>SE 166</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>R</credit>
+    </course>
+    <course category="year1">
+        <title>ECON ELECT</title>
+        <courseNum>ECON ELECT</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>3</credit>
+    </course>
+    
+    
+    <course category="year2">
+        <title>MATH 267</title>
+        <courseNum>MATH 267</courseNum>
+        <prereq classNum="1" >MATH 166</prereq>
+        <credit>4</credit>
+    </course>    
+    <course category="year2">
+        <title>SPPLM ELECT</title>
+        <courseNum>SPPLM ELECT</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>3</credit>
+    </course>
+
+
+    <course category="year3">
+        <title>SE 319</title>
+        <courseNum>SE 319</courseNum>
+        <prereq classNum="1" > COM S 228</prereq>
+        <credit>3</credit>
+    </course>
+    <course category="year3">
+        <title>COM S 309</title>
+        <courseNum>COM S 309</courseNum>
+        <prereq classNum="1" >COM S 228</prereq>
+        <credit>3</credit>
+    </course>
+    <course category="year3">
+        <title>SE 329</title>
+        <courseNum>SE 329</courseNum>
+        <prereq classNum="1" >COM S 309</prereq>
+        <credit>3</credit>
+    </course>
+
+    <course category="year4">
+        <title>SE 491</title>
+        <courseNum>SE 491</courseNum>
+        <prereq classNum="1" >SE 329</prereq>
+        <credit>3</credit>
+    </course>
+    <course category="year4">
+        <title>STAT 330</title>
+        <courseNum>STAT 330</courseNum>
+        <prereq classNum="0" ></prereq>
+        <credit>3</credit>
+    </course>
+
+    
 </school>
